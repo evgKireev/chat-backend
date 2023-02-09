@@ -63,7 +63,7 @@ io.on('connection', (socket) => {
     })
   })
 })
-server.listen(9999, (err) => {
+server.listen(process.env.PORT || 5080, (err) => {
   if (err) {
     throw Error(err)
   }

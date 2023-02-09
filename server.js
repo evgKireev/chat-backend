@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
     credentials: true,
-    origin: ['https://chat-backend-production.up.railway.app'],
+    origin: ['https://chat-full-stuck.vercel.app'],
   })
 )
 const rooms = new Map()

@@ -40,7 +40,6 @@ app.post('/rooms', (req, res) => {
   }
   res.send()
 })
-console.log(rooms.get('users'))
 
 io.on('connection', (socket) => {
   socket.on('ROOM:JOIN', ({ roomId, userName }) => {

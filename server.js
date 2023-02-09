@@ -29,7 +29,6 @@ app.get('/rooms/:id', (req, res) => {
 
 app.post('/rooms', (req, res) => {
   const { roomId, userName } = req.body
-  console.log(req.body)
   if (!rooms.has(roomId)) {
     rooms.set(
       roomId,
@@ -41,6 +40,7 @@ app.post('/rooms', (req, res) => {
   }
   res.send()
 })
+console.log(rooms.get('users'))
 
 io.on('connection', (socket) => {
   socket.on('ROOM:JOIN', ({ roomId, userName }) => {

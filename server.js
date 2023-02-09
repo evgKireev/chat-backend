@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
     credentials: true,
-    origin: ['https://chat-full-stuck.vercel.app', 'http://localhost:3000']
+    origin: ['https://chat-full-stuck.vercel.app', 'http://localhost:3000'],
   })
 )
 const rooms = new Map()
@@ -29,6 +29,7 @@ app.get('/rooms/:id', (req, res) => {
 
 app.post('/rooms', (req, res) => {
   const { roomId, userName } = req.body
+  console.log(req.body)
   if (!rooms.has(roomId)) {
     rooms.set(
       roomId,

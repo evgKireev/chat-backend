@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(
   cors({
     credentials: true,
-    origin: ['https://chat-full-stuck.vercel.app', 'http://localhost:3000'],
+    origin: ['https://chat-full-stuck.vercel.app', 'http://localhost:3000']
   })
 )
 const rooms = new Map()
